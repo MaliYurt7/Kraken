@@ -1,0 +1,22 @@
+{
+  "event": "subscribe",
+  "pair": [
+    "XBT/EUR"
+  ],
+  "subscription": {
+    "interval": 10080,
+    "name": "ohlc"
+  }
+}
+
+
+//{
+//  "event": "subscribe",
+//  "pair": [
+//    "XBT/USD",
+//    "XBT/EUR"
+//  ],
+//  "subscription": {
+//    "name": "ticker"
+//  }
+//}
