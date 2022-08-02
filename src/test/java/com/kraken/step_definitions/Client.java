@@ -29,11 +29,7 @@ public class Client extends WebSocketClient {
 
     @Override
     public void onMessage(String message) {
-       // System.out.println("Received: "+message);
         dataContext.messageList.add(message);
-//        if(dataContext.expectedMessage.equals(message)){
-//            closeConnection(1000,"Received expected message");
-//        }
     }
 
     @Override

@@ -23,6 +23,14 @@ import java.util.List;
 public class PojoCommonMethod {
 
     private static Gson gson = new Gson();
+
+    /**
+     *
+     * @param event
+     * @param pair
+     * @param ohlcSubscription
+     * @return String
+     */
     public static String ohlcPojoSerilization(String event, List<String> pair, OhlcSubscription ohlcSubscription) {
         OhlcPayload ohlcPayload=new OhlcPayload(event, pair, ohlcSubscription);
         String jsonOhlcPayload = gson.toJson(ohlcPayload);
@@ -30,6 +38,13 @@ public class PojoCommonMethod {
         return jsonOhlcPayload;
     }
 
+    /**
+     *
+     * @param event
+     * @param pair
+     * @param tickerSubscription
+     * @return String
+     */
     public static String tickerPojoSerilization(String event, List<String> pair, TickerSubscription tickerSubscription) {
         TickerPayload tickerPayload = new TickerPayload(event, pair, tickerSubscription);
         String jsonTickerPayload = gson.toJson(tickerPayload);
@@ -37,6 +52,13 @@ public class PojoCommonMethod {
         return jsonTickerPayload;
     }
 
+    /**
+     *
+     * @param event
+     * @param pair
+     * @param tradeSubscription
+     * @return String
+     */
     public static String tradePojoSerilization(String event, List<String> pair, TradeSubscription tradeSubscription) {
         TradePayload tradePayload = new TradePayload(event, pair, tradeSubscription);
         String jsontradePayload = gson.toJson(tradePayload);
@@ -44,6 +66,12 @@ public class PojoCommonMethod {
         return jsontradePayload;
     }
 
+    /**
+     * @param event
+     * @param pair
+     * @param spreadSubscription
+     * @return String
+     */
     public static String spreadPojoSerilization(String event, List<String> pair, SpreadSubscription spreadSubscription) {
         SpreadPayload spreadPayload  = new SpreadPayload(event, pair, spreadSubscription);
         String jsonSpreadPayload = gson.toJson(spreadPayload);
@@ -51,12 +79,28 @@ public class PojoCommonMethod {
         return jsonSpreadPayload;
     }
 
+    /**
+     *
+     * @param event
+     * @param pair
+     * @param bookSubscription
+     * @return String
+     */
     public static String bookPojoSerilization(String event, List<String> pair, BookSubscription bookSubscription) {
         BookPayload bookPayload   = new BookPayload(event, pair, bookSubscription);
         String jsonBookPayload= gson.toJson(bookPayload);
         System.out.println("jsonBookPayload = " + jsonBookPayload);
         return jsonBookPayload;
     }
+
+    /**
+     *
+     * @param connectionID
+     * @param event
+     * @param status
+     * @param version
+     * @return String
+     */
     public static String expectedResultJson(String connectionID, String event, String status, String version) {
         ExpectedResult expectedResult = new ExpectedResult( connectionID,  event,  status,  version);
         String jsonExpectedResultJson = gson.toJson(expectedResult);
@@ -64,6 +108,11 @@ public class PojoCommonMethod {
         return jsonExpectedResultJson;
     }
 
+    /**
+     *
+     * @param jsonFileName
+     * @return String
+     */
     public static String jsonRead(String jsonFileName) {
         String json = null;
         try {
