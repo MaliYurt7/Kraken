@@ -1,4 +1,4 @@
-# Automated Testing Framework for Karaken
+# Automated Testing Framework for Kraken Websocket API
 This repository contains QA's automated test for Kraken Websocket API
 ## Prerequisites:
 1. JDK 8+
